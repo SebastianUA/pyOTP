@@ -1,0 +1,9 @@
+**/*_BK
+**/.DS_Store
+**/.idea
+**/venv
+**/Icon*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
