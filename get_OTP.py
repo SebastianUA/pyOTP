@@ -97,14 +97,13 @@ def main():
                                      add_help=True,
                                      prefix_chars='--/',
                                      epilog='''created by Vitalii Natarov''')
-    parser.add_argument('--version', action='version', version='v1.0.1')
-    parser.add_argument('--acc', dest='account', help='Account name', default='default')
-    parser.add_argument('--path', dest='path', help='Path to .aws/credentials file',
+    parser.add_argument('-v', '--version', action='version', version='v1.0.1')
+    parser.add_argument('-a', '--acc', dest='account', help='Account name', default='default')
+    parser.add_argument('-p', '--path', dest='path', help='Path to .aws/credentials file',
                         default='~/.aws/credentials')
 
     group = parser.add_mutually_exclusive_group(required=False)
-    group.add_argument('--show-acc', dest='show_acc', help='Show account names', action='store_true')
-    # group.add_argument('--s', dest='show_acc', help='Show account names', action='store_true')
+    group.add_argument('-s', '--show-acc', dest='show_acc', help='Show account names', action='store_true')
     results = parser.parse_args()
     ac_name = results.account
     path = os.path.expanduser(results.path)
