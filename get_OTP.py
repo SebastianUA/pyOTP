@@ -23,7 +23,7 @@ class Bgcolors:
 
 def get_acc_names(db_file):
     # db_file = '/Users/captain/.aws/credentials'
-    if db_file is '':
+    if db_file == '':
         print('Please add PATH to .aws/credentials file inside this script(db_file variable)')
         print('For help, use: script_name.py -h')
         exit(1)
@@ -35,7 +35,7 @@ def get_acc_names(db_file):
 
 
 def get_creds_from_acc_name(acc_name, db_file):
-    if db_file is '':
+    if db_file == '':
         print('Please add PATH to .aws/credentials file inside this script(db_file variable)')
         exit(1)
     config = configparser.ConfigParser()
